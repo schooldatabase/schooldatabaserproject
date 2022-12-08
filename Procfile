@@ -1,1 +1,1 @@
-web: gunicorn schooldatabaserproject.wsgi
+web: gunicorn schooldatabaserproject.wsgi -log-file -
