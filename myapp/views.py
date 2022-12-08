@@ -40,7 +40,7 @@ def student_mark_sheet_table(request):
     return render (request, 'studnetmarksheettable.html', context)
 
 
-@login_required(login_url="/login")
+# @login_required(login_url="/login")
 def stud_roll_dob(request):
     if request.method == 'POST':
         sm_stud_roll = request.POST.get('sm_stud_roll')

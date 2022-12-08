@@ -18,11 +18,11 @@
 <div class="row d-flex justify-content-center mt-3">
   <div class="col-sm-6">
     {% for show in show %}
-      <h4 class="text-center alert alert-info"><b>{{show.sm_name}} download Marksheet </b></h4>
+      <h4 class="text-center  shadow alert alert-info"><b>{{show.sm_name|capfirst}} download Marksheet </b></h4>
     {% endfor %}
 {% if show %}
 
-<table class="table table-bordered table-sm table-hover table-success">
+<table class="table table-bordered shadow table-sm table-hover table-success">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Roll_NO</th>
