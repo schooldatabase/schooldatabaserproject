@@ -1,7 +1,7 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
-    {% load static %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,14 +27,29 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'about' %}">About</a>
       </li>
-      
-      {% if request.user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contate' %}">contat Us </a>
+      </li>
+
+
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Result
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="{% url 'studrolldob' %}">Student Result</a>
+
+  </div>
+</li>
+
+{% if request.user.is_authenticated %}
+{% comment %} {% if request.user.is_authenticated %} {% endcomment %}
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           School Management
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'studrolldob' %}">Student Origial marksheet</a>
           <a class="dropdown-item" href="{% url 'student' %}">Student Profile</a>
           <a class="dropdown-item" href="{% url 'teacher' %}">Teacher Profile</a>
           <a class="dropdown-item" href="{% url 'contractor' %}">contractor Profile</a>
@@ -68,10 +83,10 @@
     </form>
   </div>
 </nav>
+   {% block banner-slider %}{% endblock banner-slider %}
+    {% block content %}{% endblock content %}
 
-    {% block content %}
-    
-    {% endblock content %}
+  {% include "footer.html" %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

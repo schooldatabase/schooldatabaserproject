@@ -18,7 +18,8 @@ from .models import (Contractor, Profile, StudentMarksheet, StudentProfile,
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
-@login_required(login_url="/login")
+def contate(request):
+    return render(request, 'contates.html')
 def about(request):
     return render(request, 'about.html')
 # @login_required(login_url="/login")

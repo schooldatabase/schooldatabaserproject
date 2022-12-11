@@ -6,6 +6,7 @@ from myapp import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
+    path('contata/', views.contate, name='contate'),
     path('studnetdownload/', views.studnet_download, name='studnetdownload'),
     path('studrolldob/', views.stud_roll_dob, name='studrolldob'),
     path('student/', views.student_show, name='student'),
